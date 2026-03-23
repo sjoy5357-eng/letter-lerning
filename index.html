@@ -1,21 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6445719442687092"
-     crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Letter & Number Tracing Game</title>
-    
-    <!-- AdMob SDK -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8684653404219672"
-            crossorigin="anonymous"></script>
-    
-    <!-- AdMob Configuration -->
-    <script>
-        window.adsbygoogle = window.adsbygoogle || [];
-    </script>
-    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6445719442687092"
+         crossorigin="anonymous"></script>
     <style>
         * {
             margin: 0;
@@ -236,70 +226,6 @@
             font-weight: bold;
         }
 
-        /* AdMob Ad Styles */
-        .ad-container {
-            text-align: center;
-            margin: 20px 0;
-            background: #f8f9fa;
-            border-radius: 10px;
-            padding: 10px;
-            min-height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .ad-banner {
-            width: 100%;
-            max-width: 320px;
-            height: 50px;
-        }
-
-        .ad-interstitial {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            display: none;
-            align-items: center;
-            justify-content: center;
-            z-index: 2000;
-        }
-
-        .ad-interstitial-content {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            max-width: 90vw;
-            max-height: 90vh;
-        }
-
-        /* Debug Panel */
-        .debug-panel {
-            position: fixed;
-            top: 10px;
-            left: 10px;
-            background: rgba(0, 0, 0, 0.8);
-            color: white;
-            padding: 10px;
-            border-radius: 5px;
-            font-family: monospace;
-            font-size: 12px;
-            z-index: 3000;
-            max-width: 300px;
-        }
-
-        .debug-panel h4 {
-            margin: 0 0 10px 0;
-            color: #4ecdc4;
-        }
-
-        .debug-item {
-            margin: 5px 0;
-        }
-
         @media (max-width: 768px) {
             .title { font-size: 2rem; }
             .current-item { font-size: 1.2rem; }
@@ -310,28 +236,6 @@
     </style>
 </head>
 <body>
-    <!-- Debug Panel -->
-    <div class="debug-panel" id="debugPanel">
-        <h4>🔍 AdMob Debug</h4>
-        <div class="debug-item">SDK: <span id="sdkStatus">Loading...</span></div>
-        <div class="debug-item">Banner: <span id="bannerStatus">Checking...</span></div>
-        <div class="debug-item">Interstitial: <span id="interstitialStatus">Ready</span></div>
-        <div class="debug-item">Completions: <span id="completionCount">0</span></div>
-    </div>
-
-    <!-- Top Banner Ad -->
-    <div class="ad-container">
-        <ins class="adsbygoogle ad-banner"
-             style="display:block"
-             data-ad-client="ca-pub-8684653404219672"
-             data-ad-slot="8143210981"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
-        <script>
-             (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-    </div>
-
     <div class="game-container">
         <div class="header">
             <h1 class="title">✨ Trace the Letter! ✨</h1>
@@ -349,31 +253,6 @@
         <div class="controls">
             <button class="btn btn-clear" id="clearBtn">🧹 Clear</button>
             <button class="btn btn-next" id="skipBtn">⏭️ Skip</button>
-        </div>
-    </div>
-
-    <!-- Bottom Banner Ad -->
-    <div class="ad-container">
-        <ins class="adsbygoogle ad-banner"
-             style="display:block"
-             data-ad-client="ca-pub-8684653404219672"
-             data-ad-slot="8143210981"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
-        <script>
-             (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-    </div>
-
-    <!-- Interstitial Ad Container -->
-    <div class="ad-interstitial" id="interstitialAd">
-        <div class="ad-interstitial-content">
-            <ins class="adsbygoogle"
-                 data-ad-client="ca-pub-8684653404219672"
-                 data-ad-slot="6219755224"
-                 data-ad-format="auto"
-                 data-full-width-responsive="true"></ins>
-            <button class="btn btn-clear" onclick="closeInterstitialAd()" style="margin-top: 10px;">Close Ad</button>
         </div>
     </div>
 
